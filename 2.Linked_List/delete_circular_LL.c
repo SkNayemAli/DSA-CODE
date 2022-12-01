@@ -148,5 +148,7 @@ int main()
     
     printf("\nAfter delete the linked list is: \n");
     RDisplay(Head);
+    printf("\n");
+    
     return 0;
 }
