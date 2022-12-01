@@ -57,42 +57,16 @@ void create2(int A[],int n)
 }
 
 
-void Merge(struct Node *p,struct Node *q)
+void concat(struct Node *p,struct Node *q)
 {
-    struct Node *last;
-    if(p->data < q->data)
-    {
-        third=last=p;
-        p=p->next;
-        third->next=NULL;
-    }
-    else
-    {
-        third=last=q;
-        q=q->next;
-        third->next=NULL;
-    }
-    while(p && q)
-    {
-        if(p->data < q->data)
-        {
-            last->next=p;
-            last=p;
-            p=p->next;
-            last->next=NULL;
-        
-        }
-        else
-        {
-            last->next=q;
-            last=q;
-            q=q->next;
-            last->next=NULL;
-            
-        }
-    }
-    if(p)last->next=p;
-    if(q)last->next=q;
+   third=p;
+   while (p->next!=NULL)
+   {
+    p=p->next;
+   }
+   p->next=q;
+ // second=NULL;
+   
     
 }
 int main()
@@ -100,19 +74,19 @@ int main()
  
  int A[]={10,20,40,50,60}; 
  create(A,5);
- printf("\n\nBefore merge the first linked list:\n");
+ printf("\n\nBefore concatinating the first linked list:\n");
  Display(first);
 
  int B[]={15,18,25,30,55};
  create2(B,5);
- printf("\n\nBefore merge the second linked list:\n");
+ printf("\n\nBefore concatinating the second linked list:\n");
  Display(second);
  
  
- Merge(first,second); 
+ concat(first,second); 
 
-printf("\n\nAfter merge the linked list:\n");
- Display(third); 
+printf("\n\nAfter conatinated the linked list:\n");
+Display(third); 
  printf("\n\n");
  
  return 0;
