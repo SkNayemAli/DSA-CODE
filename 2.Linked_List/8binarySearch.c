@@ -32,17 +32,24 @@ int binarySearch(int arr[], int size, int element){
 }
  
 int main(){
-    // Unsorted array for linear search
-    // int arr[] = {1,3,5,56,4,3,23,5,4,54634,56,34};
-    // int size = sizeof(arr)/sizeof(int);
- 
-    // Sorted array for binary search
-    int arr[] = {1,3,5,56,64,73,123,225,444};
+    //int n;
+
+    int arr[100] ;
     int size = sizeof(arr)/sizeof(int);
     int element;
+    int i;
+    printf("Enter number of elements: \n");
+    scanf("%d",&size);
+
+    printf("Enter %d integers: \n",size);
+    for(i = 0; i < size; i++)
+    scanf("%d",&arr[i]);
+
+    
+   
      printf("Enter the elemet which you want to found:\n");
      scanf("%d",&element);
     int searchIndex = binarySearch(arr, size, element);
-    printf("The element %d was found at index %d \n", element, searchIndex);
+    printf("The element %d is found at index %d \n", element, searchIndex);
     return 0;
 }

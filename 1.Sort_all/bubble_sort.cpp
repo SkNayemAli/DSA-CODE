@@ -4,11 +4,11 @@ using namespace std;
 int main(){
 
     int n;
-    cout<<"Enter the size of element.."<<endl;
+    cout<<"Enter the size of element: "<<endl;
     cin>>n;
 
     int arr[n];
-     cout<<"Enter the no of element: "<<endl;
+     cout<<"Enter the elements which you want to sort: "<<endl;
     for (int i = 0; i < n; i++)
     {
        
@@ -28,6 +28,7 @@ int main(){
         counter++;
     }
 
+    cout<<"After sorting, the list is: "<<endl;
     for (int i = 0; i < n; i++)
     {
         cout<<arr[i]<<" ";
